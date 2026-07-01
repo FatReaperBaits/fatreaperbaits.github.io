@@ -454,6 +454,104 @@ section { padding: 8rem 2.5rem; position: relative; }
   color: var(--rust);
 }
 
+/* ============ NEWS / PARTNERSHIP ============ */
+.news {
+  background: linear-gradient(180deg, var(--deep), var(--abyss));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.news-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--rust);
+  background: rgba(184, 66, 30, 0.045);
+  padding: clamp(2rem, 4vw, 3.25rem) clamp(1.5rem, 4vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+}
+.news-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle at top right, rgba(184, 66, 30, 0.18), transparent 70%);
+  pointer-events: none;
+}
+.news-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 1.25rem;
+}
+.news-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rust);
+  box-shadow: 0 0 0 0 rgba(184, 66, 30, 0.6);
+  animation: newsPulse 2s infinite;
+}
+.news-badge .news-date {
+  color: var(--fog);
+  letter-spacing: 0.25em;
+}
+@keyframes newsPulse {
+  0% { box-shadow: 0 0 0 0 rgba(184, 66, 30, 0.55); }
+  70% { box-shadow: 0 0 0 12px rgba(184, 66, 30, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 66, 30, 0); }
+}
+.news-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+.news-title em {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--rust);
+}
+.news p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--bone);
+  opacity: 0.9;
+  margin-bottom: 1.25rem;
+  max-width: 820px;
+}
+.news p.news-lead {
+  font-size: 1.28rem;
+  opacity: 1;
+}
+.news p:last-of-type { margin-bottom: 0; }
+.news-partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fog);
+}
+.news-partners strong { color: var(--bone); font-weight: 700; }
+.news-partners .x { color: var(--rust); font-size: 0.9rem; }
+
 /* ============ STATEMENT ============ */
 .statement {
   border-top: 1px solid var(--line);
@@ -1489,7 +1587,7 @@ html.js-ready .reveal.visible {
   <div class="hero-content">
     <div class="hero-tag" data-i18n="hero.tag">Fat Reaper Baits · Bait 01 — The Fat Reaper</div>
     <div class="hero-logo">
-      <img src="logo.png" alt="Fat Reaper Baits — Custom XXL Pike Lures" class="hero-logo-img" width="1024" height="1024">
+      <img src="logo.png?v=2" alt="Fat Reaper Baits — Custom XXL Pike Lures" class="hero-logo-img" width="1024" height="1024">
     </div>
     <p class="hero-sub" data-i18n="hero.sub">Stop met vissen. Start met vangen!</p>
     <div class="hero-meta">
@@ -1501,6 +1599,24 @@ html.js-ready .reveal.visible {
   </div>
   <div class="scroll-indicator" data-i18n="hero.scroll">Scroll naar de diepte</div>
 </header>
+
+<!-- ============ NEWS / PARTNERSHIP ============ -->
+<section class="news" id="news">
+  <div class="news-inner reveal">
+    <div class="news-badge">
+      <span class="dot" aria-hidden="true"></span>
+      <span data-i18n="news.badge">Breaking News · Partnership</span>
+      <span class="news-date" data-i18n="news.date">— Juli 2026</span>
+    </div>
+    <h2 class="news-title" data-i18n="news.title">Fat Reaper Baits &amp; Whitelabelfishing tekenen voor <em>10 jaar</em>.</h2>
+    <p class="news-lead" data-i18n="news.lead">Het is officieel — en het is groot. Fat Reaper Baits en Whitelabelfishing hebben hun handtekening gezet onder een <strong>tienjarig partnership</strong>. Een keiharde alliantie die de lat voor de roofvis-scene meedogenloos hoog legt.</p>
+    <p data-i18n="news.p1">Tien jaar. Geen proefballonnetje, geen los avontuurtje, maar een langetermijnverbond tussen twee partijen die één taal spreken: die van de allergrootste snoek. Waar Fat Reaper Baits staat voor rauwe, bewezen killer-baits, brengt Whitelabelfishing de kracht, kennis en het bereik om die baits naar de handen van iedere serieuze roofvisser te brengen.</p>
+    <p data-i18n="news.p2">Samen slaan we een nieuwe koers in: meer edities, meer innovatie, meer Vänern-approved vangkracht — en een decennium lang de garantie dat de Reaper blijft doen waarvoor hij gebouwd is. Kortom: de jacht is nog maar net begonnen, en het roofdier is niet langer alleen. Houd deze pagina in de gaten, want dit is pas hoofdstuk één.</p>
+    <div class="news-partners" data-i18n="news.partners">
+      <strong>Fat Reaper Baits</strong> <span class="x">×</span> <strong>Whitelabelfishing</strong> · 2026 – 2036
+    </div>
+  </div>
+</section>
 
 <!-- ============ STATEMENT ============ -->
 <section class="statement" id="story">
@@ -2279,6 +2395,14 @@ const I18N_EN = {
   'hero.metaOrigin': 'Origin',
   'hero.cta': 'Claim the Reaper →',
   'hero.scroll': 'Scroll into the deep',
+
+  'news.badge': 'Breaking News · Partnership',
+  'news.date': '— July 2026',
+  'news.title': 'Fat Reaper Baits &amp; Whitelabelfishing sign a <em>10-year</em> deal.',
+  'news.lead': 'It\'s official — and it\'s big. Fat Reaper Baits and Whitelabelfishing have put their signatures under a <strong>ten-year partnership</strong>. A hard-hitting alliance that sets the bar for the predator-fishing scene brutally high.',
+  'news.p1': 'Ten years. No trial balloon, no one-off adventure, but a long-term pact between two parties who speak the same language: that of the biggest pike out there. Where Fat Reaper Baits stands for raw, proven killer baits, Whitelabelfishing brings the power, know-how and reach to put those baits into the hands of every serious predator angler.',
+  'news.p2': 'Together we\'re charting a new course: more editions, more innovation, more Vänern-approved catching power — and a full decade of guarantee that the Reaper keeps doing exactly what it was built for. In short: the hunt has only just begun, and the predator is no longer alone. Keep an eye on this page, because this is only chapter one.',
+  'news.partners': '<strong>Fat Reaper Baits</strong> <span class="x">×</span> <strong>Whitelabelfishing</strong> · 2026 – 2036',
 
   'story.label': '01 — The Story',
   'story.title': 'Not for the <em>faint-hearted</em>.',
